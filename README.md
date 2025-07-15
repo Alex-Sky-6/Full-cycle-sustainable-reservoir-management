@@ -82,10 +82,7 @@ Core Code/
 
 ### Basic Execution
 ```matlab
-% Run solver directly
-solver()
-
-% Or run with specified parameters
+% Run with specified parameters
 [Dec,Obj,Con] = solver('algorithm',@Integration_of_GCN_and_MOEA_model,'problem',@reservoir,'M',3,'N',200,'maxFE',10000);
 ```
 
