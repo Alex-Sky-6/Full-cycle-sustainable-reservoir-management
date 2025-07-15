@@ -39,7 +39,7 @@ classdef reservoir < PRORES
             % Read Wudongde runoff data
             wdddata = readtable('Runoff-Wudongde-Monthly-Standardized.xlsx');
             year_col = wdddata.Var1;
-            row = find(year_col == 2016);
+            row = find(year_col == 1979);
             if ~isempty(row)
                 obj.Input = table2array(wdddata(row, 2:13));
             else
@@ -55,7 +55,7 @@ classdef reservoir < PRORES
             % Read Xiangjiaba-Three Gorges interval flow data
             xjb_sxdata = readtable('Xiangjiaba-ThreeGorges-Interval-Monthly-Flow-Standardized.xlsx');
             year_col = xjb_sxdata.Var1;
-            row = find(year_col == 2016);
+            row = find(year_col == 1979);
             if ~isempty(row)
                 Flow_XJBSGX_12months = table2array(xjb_sxdata(row, 2:13));
             else
@@ -283,7 +283,7 @@ classdef reservoir < PRORES
             % Read Xiangjiaba-Three Gorges interval flow data
             xjb_sxdata = readtable('Xiangjiaba-ThreeGorges-Interval-Monthly-Flow-Standardized.xlsx');
             year_col = xjb_sxdata.Var1;
-            row = find(year_col == 2016);
+            row = find(year_col == 1979);
             if ~isempty(row)
                 Flow_XJBSGX_12months = table2array(xjb_sxdata(row, 2:13));
             else
